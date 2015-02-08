@@ -1,0 +1,19 @@
+%h1= t('World of Tanks replays')
+
+#wot-replays
+  %table.table.table-bordered.table-hover.table-striped
+    %tr
+      %th= t('Time')
+      %th= t('Tank')
+      %th= t('Map')
+      %th= t('Country')
+    - @wot_replays.each do |wot_replay|
+      %tr
+        %td= time_tag wot_replay.time
+        %td= wot_replay.tank
+        %td= t(wot_replay.map)
+        %td
+          = image_tag "country-4x3/#{country_code(wot_replay.country)}.svg",
+            width: 16, alt: wot_replay.country
+          = t(wot_replay.country)
+
