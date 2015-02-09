@@ -7,13 +7,19 @@
       %th= t('Tank')
       %th= t('Map')
       %th= t('Country')
+      %th
     - @wot_replays.each do |wot_replay|
       %tr
         %td= time_tag wot_replay.time
         %td= wot_replay.tank
         %td= t(wot_replay.map)
         %td
-          = image_tag "country-4x3/#{country_code(wot_replay.country)}.svg",
+          = image_tag "country-4x3/#{t("countries.#{wot_replay.country.downcase}")}.svg",
             width: 16, alt: wot_replay.country
           = t(wot_replay.country)
+        %td
+          = link_to wot_replay_path(wot_replay),
+            title: t('Download', default: 'Download') do
+            = glyph(:download, {})
 
+= high_chart('map-chart-container', @map_chart)

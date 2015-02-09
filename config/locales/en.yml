@@ -8,11 +8,11 @@
 #
 # In views, this is aliased to just `t`:
 #
-#     <%= t('hello') %>
+#     <%: t('hello') %>
 #
 # To use a different locale, set it with `I18n.locale`:
 #
-#     I18n.locale = :es
+#     I18n.locale : :es
 #
 # This would use the information in config/locales/es.yml.
 #
@@ -20,4 +20,44 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  maps:
+    karelia: Karelia
+    malinovka: Malinovka
+    campania: Province
+    himmelsdorf: Himmelsdorf
+    prohorovka: Prokhorovka
+    ensk: Ensk
+    lakeville: Lakeville
+    ruinberg: Ruinberg
+    hills: Mines
+    murovanka: Murovanka
+    erlenberg: Erlenberg
+    siegfried_line: Siegfried Line
+    komarin: Komarin
+    munchen: Widepark
+    cliff: Cliff
+    monastery: Abbey
+    slough: Swamp
+    westfeld: Westfield
+    desert: Sand River
+    el_hallouf: El-Hallouf
+    airfield: Airfield
+    fjord: Fjords
+    redshire: Redshire
+    steppes: Steppes
+    fishing_bay: Fisherman's Bay
+    caucasus: Mountain Pass
+    mannerheim_line: Arctic Region
+    crimea: South Coast
+    north_america: Live Oaks
+    north_america: Highway
+    canada_a: Serene Coast
+    asia: Dragon Ridge
+    
+  countries:
+    france: fr
+    uk: gb
+    usa: us
+    germany: de
+    japan: jp
+    china: cn

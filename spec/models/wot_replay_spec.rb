@@ -14,7 +14,7 @@ describe WotReplay do
   it { is_expected.to be_valid }
   it { is_expected.to have_attached_file :replay }
 
-  its(:country) { is_expected.to eq 'Germany' }
+  its(:country) { is_expected.to eq 'germany' }
   its(:tank) { is_expected.to eq 'RhB_Waffentrager' }
   its(:map) { is_expected.to eq 'hills' }
 

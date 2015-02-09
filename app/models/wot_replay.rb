@@ -10,17 +10,12 @@ class WotReplay < ActiveRecord::Base
 
   after_initialize :parse_meta_data_from_file_name
 
-  def tank
-    translate_plain_data(:tank)
+  %i[ tank map country ].each do |attribute|
+    define_method attribute do
+      plain_meta_data[attribute]
+    end
   end
 
-  def map
-    translate_plain_data(:map)
-  end
-
-  def country
-    plain_meta_data[:country].humanize
-  end
 
   def time
     DateTime.new(plain_meta_data[:year].to_i,
@@ -31,11 +26,6 @@ class WotReplay < ActiveRecord::Base
   end
 
   private
-  def translate_plain_data(value_name)
-    plain_name = plain_meta_data[value_name]
-    I18n.t("#{value_name.to_s.pluralize}.#{plain_name.downcase}",
-           default: plain_name)
-  end
 
   def parse_meta_data_from_file_name
     basename         = File.basename(replay_file_name.to_s)

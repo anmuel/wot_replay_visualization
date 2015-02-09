@@ -10,9 +10,9 @@ gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.1.0'
 gem 'haml-rails'
-gem 'twitter-bootstrap-rails'
+gem 'twitter-bootstrap-rails', github: 'seyhunak/twitter-bootstrap-rails'
 gem 'svg-flags-rails'
-gem 'highcharts-rails'
+gem 'lazy_high_charts'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
@@ -43,6 +43,7 @@ group :production do
 end
 
 group :development, :test do
+  gem 'pry'
   gem 'capistrano-rails'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'

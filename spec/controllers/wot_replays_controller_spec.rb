@@ -13,6 +13,7 @@ describe WotReplaysController do
     end
 
     specify { expect(assigns(:wot_replays)).to be }
+    specify { expect(assigns(:map_chart)).to be }
   end
 
   describe 'GET new' do

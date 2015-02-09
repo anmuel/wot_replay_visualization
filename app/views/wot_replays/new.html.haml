@@ -1,7 +1,7 @@
 .container
   = simple_form_for @wot_replay,
     html: {multipart: true, class: 'form-inline'} do |form|
-    = form.input :replay_file
+    = form.input :replay
     = form.button :submit, t('Upload', default: 'Upload')
 
 
