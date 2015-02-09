@@ -16,10 +16,10 @@ ActiveRecord::Schema.define(version: 20150208175813) do
   create_table "wot_replays", force: :cascade do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "replay_file_file_name"
-    t.string   "replay_file_content_type"
-    t.integer  "replay_file_file_size"
-    t.datetime "replay_file_updated_at"
+    t.string   "replay_file_name"
+    t.string   "replay_content_type"
+    t.integer  "replay_file_size"
+    t.datetime "replay_updated_at"
   end
 
 end

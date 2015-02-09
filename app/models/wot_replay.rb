@@ -1,9 +1,10 @@
 class WotReplay < ActiveRecord::Base
   FILE_NAME_PATTERN = /(?<year>\d{4})(?<month>\d{2})(?<day>\d{2})_(?<hour>\d{2})(?<minute>\d{2})_(?<country>\w+)\-(?<tank>.*)_(?<count>\d+)_(?<map>\w+).*wotreplay$/
 
-  has_attached_file :replay_file
-  validates_attachment_file_name :replay_file, matches: FILE_NAME_PATTERN
-  do_not_validate_attachment_file_type :replay_file
+  has_attached_file :replay
+  validates_attachment_file_name :replay, matches: FILE_NAME_PATTERN
+  do_not_validate_attachment_file_type :replay
+  validates_presence_of :replay
 
   attr_reader :plain_meta_data
 
@@ -37,7 +38,7 @@ class WotReplay < ActiveRecord::Base
   end
 
   def parse_meta_data_from_file_name
-    basename         = File.basename(replay_file_file_name.to_s)
+    basename         = File.basename(replay_file_name.to_s)
     @plain_meta_data = basename.match(FILE_NAME_PATTERN)
 
     @plain_meta_data.present?

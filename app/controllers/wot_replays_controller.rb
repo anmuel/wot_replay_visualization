@@ -14,6 +14,6 @@ class WotReplaysController < ApplicationController
 
   private
   def wot_replay_params
-    params.require(:wot_replay).permit(:replay_file)
+    params.require(:wot_replay).permit(:replay)
   end
 end
