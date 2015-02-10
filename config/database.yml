@@ -19,6 +19,3 @@ development:
 test:
   <<: *default
   database: db/test.sqlite3
-  
-production:
-  url: postgres://qtzhqtmusxuqmw:sP-uvhvlndBJP9P39TsTk66v0y@ec2-174-129-213-103.compute-1.amazonaws.com:5432/dab1qf1d6h1hct
