@@ -1,19 +1,19 @@
 !!!
 %html
   %head
-    %meta{:content => "text/html; charset=UTF-8",
-      "http-equiv" => "Content-Type"}/
-    %title= t('WotReplayVisualization',
-      default: 'World of Tanks Replays Visualization')
-    = stylesheet_link_tag    'application', media: 'all',
+    %meta{content: 'text/html; charset=UTF-8', 'http-equiv' => 'Content-Type'}/
+    %title= t(:title, default: 'World of Tanks Replays Visualization')
+    = stylesheet_link_tag 'application', media: 'all',
       'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   %body
     = nav_bar brand: t('Visualize the World'), brand_link: root_path,
       static: :top do
-      = link_to t('Upload Replay'), new_wot_replay_path,
-        class: 'btn btn-primary pull-right'
+      = link_to new_wot_replay_path,
+        class: 'btn btn-primary pull-right upload-button' do
+        = glyph(:upload, {})
+        = t('Upload Replay')
     = bootstrap_flash
     .container
       = yield

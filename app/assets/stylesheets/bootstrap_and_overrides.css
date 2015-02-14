@@ -23,3 +23,7 @@
       url('/assets/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
 }
 */
+
+.upload-button {
+    margin: 6px;
+}
