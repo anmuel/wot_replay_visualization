@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/seyhunak/twitter-bootstrap-rails.git
-  revision: 62854e5129e1a5a24589b3a3849235ca4b794e6f
+  revision: cd805c7217703e60ff82576525a3ba03a3c2bc35
   specs:
     twitter-bootstrap-rails (3.2.1)
       actionpack (>= 3.1)
@@ -96,9 +96,9 @@ GEM
     diff-lcs (1.2.5)
     equalizer (0.0.9)
     erubis (2.7.0)
-    eventmachine (1.0.6)
+    eventmachine (1.0.7)
     execjs (2.3.0)
-    globalid (0.3.2)
+    globalid (0.3.3)
       activesupport (>= 4.1.0)
     haml (4.0.6)
       tilt
