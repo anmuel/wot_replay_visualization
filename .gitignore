@@ -17,4 +17,5 @@
 /tmp
 .idea
 
-*.gzpublic/assets/
+*.gz
+public/assets/
