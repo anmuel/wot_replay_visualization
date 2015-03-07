@@ -18,10 +18,10 @@ class MapChartPresenter
   private
 
   def map_table
-    locale = I18n.locale
-    file_name = Rails.root.join('config', 'locales', "#{locale}.yml")
+    locale       = I18n.locale
+    file_name    = Rails.root.join('config', 'locales', "#{locale}.yml")
     file_content = File.read(file_name)
-    hash = YAML.load(file_content).with_indifferent_access
+    hash         = YAML.load(file_content).with_indifferent_access
     hash[locale][:maps]
   end
 end

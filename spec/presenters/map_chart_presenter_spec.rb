@@ -11,5 +11,8 @@ describe MapChartPresenter do
 
   describe '#series' do
     it { is_expected.to respond_to :series }
+    it 'is at least an empty array by default' do
+      expect(MapChartPresenter.new.series).to be_an Array
+    end
   end
 end
