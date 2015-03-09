@@ -48,6 +48,8 @@ group :development, :test do
   gem 'sqlite3'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  gem 'pry-rescue'
+  gem 'pry-stack_explorer'
 
   gem 'rspec-rails', '~> 3'
   gem 'rspec-its'
@@ -60,6 +62,8 @@ group :development, :test do
   gem 'database_cleaner'
   gem 'spreewald'
   gem 'selenium'
+  gem 'selenium-webdriver'
+  #gem 'capybara-webkit'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
