@@ -19,3 +19,5 @@
 
 *.gz
 public/assets/
+public/system/
+coverage/

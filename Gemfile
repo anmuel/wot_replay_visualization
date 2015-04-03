@@ -38,7 +38,7 @@ gem 'thin'
 
 # Use Capistrano for deployment
 group :production do
-  # use postgresql in production environment
+  # use postgresql in production environment for heroku
   gem 'pg'
 end
 
@@ -51,19 +51,24 @@ group :development, :test do
   gem 'pry-rescue'
   gem 'pry-stack_explorer'
 
-  gem 'rspec-rails', '~> 3'
-  gem 'rspec-its'
-  gem 'shoulda-matchers'
-
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
-  gem 'cucumber-rails'
+  #gem 'capybara-webkit'
+end
+
+group :test do
+  gem 'rspec-rails', '~> 3'
+  gem 'rspec-its'
+  gem 'rspec-collection_matchers'
+  gem 'shoulda-matchers'
+  gem 'simplecov', require: false
+  gem 'cucumber-rails', require: false
   gem 'capybara'
   gem 'database_cleaner'
   gem 'spreewald'
   gem 'selenium'
   gem 'selenium-webdriver'
-  #gem 'capybara-webkit'
+  gem 'fabrication'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
