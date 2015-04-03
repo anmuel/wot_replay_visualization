@@ -11,10 +11,11 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 gem 'haml-rails'
 gem 'twitter-bootstrap-rails' #, github: 'seyhunak/twitter-bootstrap-rails'
+gem 'font-awesome-rails'
 gem 'svg-flags-rails'
 gem 'lazy_high_charts'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-# gem 'therubyracer', platforms: :ruby
+gem 'therubyracer', platforms: :ruby
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

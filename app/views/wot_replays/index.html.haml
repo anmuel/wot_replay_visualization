@@ -20,6 +20,6 @@
         %td
           = link_to wot_replay_path(wot_replay),
             title: t('Download', default: 'Download') do
-            = glyph(:download, {})
+            = fa_icon('download')
 
 = high_chart('map-chart-container', @map_chart)

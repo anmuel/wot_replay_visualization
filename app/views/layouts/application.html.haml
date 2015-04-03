@@ -12,7 +12,7 @@
       static: :top do
       = link_to new_wot_replay_path,
         class: 'btn btn-primary pull-right upload-button' do
-        = glyph(:upload, {})
+        = fa_icon 'upload'
         = t('Upload Replay')
     = bootstrap_flash
     .container
