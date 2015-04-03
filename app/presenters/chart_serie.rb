@@ -6,7 +6,6 @@ class ChartSerie
   attribute :name, String
 
   attr_reader :data
-  attr_reader :criteria
 
   def for(criteria, as: nil)
     self.criteria = criteria

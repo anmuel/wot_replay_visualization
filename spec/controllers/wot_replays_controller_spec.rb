@@ -30,6 +30,26 @@ describe WotReplaysController do
     specify { expect(assigns(:wot_replay)).to be }
   end
 
+  describe 'GET show' do
+    let(:wot_replay) { Fabricate(:wot_replay) }
+
+    before do
+      get :show, id: wot_replay.id
+    end
+
+    subject { response }
+
+    it { is_expected.to be_successful }
+    its(:content_type) { is_expected.to eq 'application/octet-stream' }
+    it 'has file attachment headers for the replay file to download' do
+      headers = response.headers
+      content_disposition = "attachment; " +
+        "filename=\"#{wot_replay.replay_file_name}\""
+      expect(headers['Content-Disposition']).to eq content_disposition
+      expect(headers['Content-Transfer-Encoding']).to eq 'binary'
+    end
+  end
+
   describe 'POST create' do
     require 'rack/test'
     let(:params) do
